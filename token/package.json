@@ -1,0 +1,30 @@
+{
+  "name": "pancakeswap-fork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ILESKOV/pancakeswap-fork.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ILESKOV/pancakeswap-fork/issues"
+  },
+  "homepage": "https://github.com/ILESKOV/pancakeswap-fork#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "hardhat": "^2.13.0"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-solhint": "^3.0.0",
+    "dotenv": "^16.0.3",
+    "hardhat-contract-sizer": "^2.8.0",
+    "solidity-docgen": "^0.6.0-beta.35"
+  }
+}

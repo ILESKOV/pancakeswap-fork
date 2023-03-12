@@ -23,6 +23,7 @@ import { PageMeta } from 'components/Layout/Page'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistor, useStore } from 'state'
 import { usePollBlockNumber } from 'state/block/hooks'
+import { STGWarningModalContainer } from 'components/STGWarningModal/STGWarningModalContainer'
 import { Blocklist, Updaters } from '..'
 import { SEO } from '../../next-seo.config'
 import { SentryErrorBoundary } from '../components/ErrorBoundary'
@@ -111,19 +112,6 @@ function MyApp(props: AppProps<{ initialReduxState: any }>) {
           `,
         }}
       />
-      <Script
-        strategy="afterInteractive"
-        id="google-tag-2"
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','customDataLayer','GTM-PP4GC4F');
-          `,
-        }}
-      />
     </>
   )
 }
@@ -173,6 +161,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
       <ToastListener />
       <FixedSubgraphHealthIndicator />
       <NetworkModal pageSupportedChains={Component.chains} />
+      <STGWarningModalContainer />
       <TransactionsDetailModal />
       {isShowScrollToTopButton && <ScrollToTopButtonV2 />}
     </ProductionErrorBoundary>

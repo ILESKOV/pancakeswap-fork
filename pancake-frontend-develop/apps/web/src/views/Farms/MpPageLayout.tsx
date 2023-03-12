@@ -34,6 +34,7 @@ const FarmsMpPageLayout: React.FC<React.PropsWithChildren<unknown>> = ({ childre
   return (
     <>
       <Navbar />
+      {injected && <Farms>{children}</Farms>}
     </>
   )
 }
